@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Overlay Modal for Player Name Input -->
+    <div id="overlay" class="overlay">
+        <div class="modal">
+            <h2>Enter Player Names</h2>
+            <form id="playerForm">
+                <div class="form-group">
+                    <label for="playerX">Player X Name:</label>
+                    <input type="text" id="playerX" name="playerX" required>
+                </div>
+                <div class="form-group">
+                    <label for="playerO">Player O Name:</label>
+                    <input type="text" id="playerO" name="playerO" required>
+                </div>
+                <button type="submit">Start Game</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <!-- Game Section -->
+        <div class="game-section">
+            <h1>Tic Tac Toe</h1>
+            <div id="gameBoard"></div>
+            <p id="status">Player X's turn</p>
+            <button id="resetGame">Reset Game</button>
+            <button id="newGame">New Game</button>
+        </div>
+
+        <!-- Scoreboard Section -->
+        <div class="scoreboard">
+            <h2>Scoreboard</h2>
+            <div class="score">
+                <p id="scoreXName">Player X: <span id="scoreX">0</span></p>
+            </div>
+            <div class="score">
+                <p id="scoreOName">Player O: <span id="scoreO">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+/* Basic Reset and Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay Modal Styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.modal {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #495057;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.modal button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #218838;
+}
+
+/* Game Container Styling */
+.game-container {
+    display: flex;
+    width: 80%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Game Section Styling */
+.game-section {
+    flex: 2;
+    padding: 20px;
+    text-align: center;
+}
+
+.game-section h1 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+#gameBoard div {
+    background-color: #ffffff;
+    border: 2px solid #6c757d;
+    font-size: 48px;
+    font-weight: bold;
+    color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    user-select: none;
+}
+
+#gameBoard div:hover {
+    background-color: #e9ecef;
+}
+
+#status {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #495057;
+}
+
+button#resetGame {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button#resetGame:hover {
+    background-color: #c82333;
+}
+button#newGame{
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button#newGame:hover {
+    background-color: #c82333;
+}
+
+/* Scoreboard Styling */
+.scoreboard {
+    flex: 1;
+    background-color: #f1f3f5;
+    padding: 20px;
+    border-left: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.scoreboard h2 {
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.score {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #495057;
+}
+
+.score p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    #gameBoard {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    #gameBoard div {
+        font-size: 36px;
+    }
+
+    .scoreboard {
+        border-left: none;
+        border-top: 1px solid #dee2e6;
+    }
+}
+/* Style for the overlay container */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Style for the overlay container */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden; /* Hidden by default, shown when new game is triggered */
+}
+
+
